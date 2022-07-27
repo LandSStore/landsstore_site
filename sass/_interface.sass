@@ -19,6 +19,37 @@ body
     color: #ffffff
     +bold
 
+.bg-secondary
+    background-color: $bg-secondary
+
+.input
+    height: 80px
+    padding-left: 30px
+    border: 1px solid #dddddd
+
+.checkbox
+    display: none
+    &:checked + label:before
+        background-color: $primary
+    &_label
+        display: flex
+        align-items: center
+        width: 225px
+        &:hover
+            cursor: pointer
+        &::before
+            content: ''
+            display: inline-block
+            width: 30px
+            height: 30px
+            border: 1px solid #dddddd
+            margin-right: 10px
+
 @media (max-width: 576px)
-    .button-o
-        font-size: 10px
+.button-o
+    font-size: 10px
+   
+@media (max-width: 576px)
+.checkbox
+    &_label
+        margin-bottom: 10px
