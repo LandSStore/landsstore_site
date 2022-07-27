@@ -107,9 +107,11 @@ body {
   color: #ffffff;
   transition: 0.2s;
   transform: translateY(-200%);
+  opacity: 0;
 }
 .menu_active {
   transform: translateY(0%);
+  opacity: 1;
 }
 .menu_nav {
   display: flex;
@@ -160,9 +162,6 @@ body {
   .menu {
     top: 60px;
   }
-  .menu-btn {
-    height: 60px;
-  }
   .menu_nav {
     flex-direction: column;
   }
@@ -171,10 +170,11 @@ body {
   }
 }
 .hero {
-  background: #f1f1f1 url("../img/hero/hero-bg.jpeg") no-repeat center top 80px;
-  background-size: contain;
-  padding-top: 180px;
+  background: #f1f1f1 url("../img/hero/hero-bg.jpeg") no-repeat center top;
+  background-size: cover;
+  padding-top: 120px;
   padding-bottom: 270px;
+  margin-top: 80px;
 }
 .hero_title {
   font-size: 36px;
