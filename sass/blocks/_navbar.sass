@@ -34,8 +34,10 @@
     color: #ffffff
     transition: .2s
     transform: translateY(-200%)
+    opacity: 0
     &_active
         transform: translateY(0%)
+        opacity: 1
     &_nav
         display: flex
         align-items: center
@@ -79,8 +81,6 @@
         display: none
     .menu
         top: 60px
-        &-btn
-            height: 60px
         &_nav
             flex-direction: column
         &_link
