@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LandSStore 3D</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,13 +15,13 @@
         <div class="menu">
             <div class="container">
                 <nav class="menu_nav">
-                    <a href="#" class="menu_link">Головна</a>
-                    <a href="#" class="menu_link">Розрахунок</a>
-                    <a href="#" class="menu_link">Каталог</a>
-                    <a href="#" class="menu_link">Статті</a>
-                    <a href="#" class="menu_link">Прайс-лист</a>
-                    <a href="#" class="menu_link">Про нас</a>
-                    <a href="#" class="menu_link">Контакти</a>
+                    <a href="#hero" class="menu_link">Головна</a>
+                    <a href="#offer" class="menu_link">Розрахунок</a>
+                    <a href="#catalog" class="menu_link">Каталог</a>
+                    <a href="#blog" class="menu_link">Статті</a>
+                    <a href="#price" class="menu_link">Прайс-лист</a>
+                    <a href="#steps" class="menu_link">Про виготовлення</a>
+                    <a href="#contacts" class="menu_link">Контакти</a>
                 </nav>
             </div>
             <!-- /.container -->
@@ -42,20 +41,20 @@
                     </div>
 
                     <div class="navbar_mobile">
-                        <a class="navbar_phone" href="tel:+380680718839">+(380) 68 071 88 39</a>
+                        <a class="navbar_phone" href="viber://chat?number=%2B380680718839">+(380) 68 071 88 39</a>
                         <span class="navbar_worktime navbar_small-text">без вихідних 9:00-21:00</span>
                     </div>
                     <div class="navbar_landline">
-                        <a class="navbar_phone" href="tel:+380680718839">+(380) 68 071 88 39</a>
+                        <a class="navbar_phone" href="viber://chat?number=%2B380680718839">+(380) 68 071 88 39</a>
                         <a class="navbar_email navbar_small-text" href="mailto:landsstore.3d@gmail.com">landsstore.3d@gmail.com</a>
                     </div>
 
-                    <button class="button-o navbar_btn">Зробити замовлення</button>
+                    <a href="#offer" class="button-o navbar_btn">Зробити замовлення</a>
                 </div>
             </div>
         </div>
         <!-- /.navbar -->
-        <div class="hero">
+        <div class="hero" id="hero">
             <div class="container">
                 <h1 class="hero_title">
                     Доступні послуги:
@@ -67,7 +66,7 @@
                     <span class="hero_subtitle">- Сувенірна продукція;</span>
                 </div>
                 
-                <button class="button hero_btn">Замовити послугу</button>
+                <a href="#offer" class="button hero_btn">Замовити послугу</a>
             </div>
         </div>
         <!-- /.hero -->
@@ -75,7 +74,7 @@
     <!-- /.header -->
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer_block offer-block offer-block_top">
                     <h2 class="offer_title">Залиште заявку на розрахунок</h2>
@@ -87,19 +86,29 @@
                         <div class="form_row">
                             <div class="form_group">
                                 <label for="" class="form_label">Тип пластика</label>
-                                <input type="text" class="input form_input">
+                                <input type="hidden" name="type" id="select-type" value="ABS | ABS+ | ABS Pro">
+                                <div class="select form_select">
+                                    <div class="select_checked">ABS | ABS+ | ABS Pro</div>
+                                    <ul class="select_dropdown">
+                                        <li class="select_option" data-value="ABS | ABS+ | ABS Pro">ABS | ABS+ | ABS Pro</li>
+                                        <li class="select_option" data-value="PLA | PLA+ | PLA Pro">PLA | PLA+ | PLA Pro</li>
+                                        <li class="select_option" data-value="PET-G | coPET">PET-G | coPET</li>
+                                        <li class="select_option" data-value="FLEX | TPU | ELASTAN">FLEX | TPU | ELASTAN</li>
+                                        <li class="select_option" data-value="NYLON | +CCF | PA6">NYLON | +CCF | PA6</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form_group">
                                 <label for="" class="form_label">Ширина, мм</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                             <div class="form_group">
                                 <label for="" class="form_label">Довжина, мм</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                             <div class="form_group">
                                 <label for="" class="form_label">Висота, мм</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                             <!-- /.form_group -->
                         </div>
@@ -128,7 +137,7 @@
                                 <input type="text" class="input form_input" placeholder="Ваше ім'я">
                             </div>
                             <div class="form_group">
-                                <input type="tel" class="input form_input" placeholder="Ваш телефон">
+                                <input type="tel" class="input form_input" placeholder="+380 (---) --- -- --">
                             </div>
                             <div class="form_group">
                                 <input type="submit" class="button form_btn_top" value="Замовити розрахунок">
@@ -179,7 +188,7 @@
             </div>
         </section>
 
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section_title">Каталог готових виробів</h2>
                 <div class="catalog-block">
@@ -337,7 +346,7 @@
             </div>
         </section>
 
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <div class="container">
                 <div class="blog_heading">
                     <h3 class="blog_title">Корисне або що необхідно знати...</h3>
@@ -388,7 +397,7 @@
         </section>
         <!-- /.section blog-list -->
 
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section_title">Ціни та типи 3D друку</h2>
                 <div class="price-block">
@@ -517,7 +526,7 @@
         </section>
         <!-- /.section price -->
 
-        <section class="section steps">
+        <section class="section steps" id="steps">
             <div class="container">
                 <h2 class="section_title">Етапи виконання замовлення</h2>
                 <div class="steps-block">
@@ -526,7 +535,7 @@
                         <h4 class="step_title">Заявка</h4>
                         <!-- /.step_title -->
                         <p class="step_text">
-                            Ви залишаєте заявку на нашому сайті абопо телефону Viber
+                            Ви залишаєте заявку на нашому сайті або по телефону Viber
                         </p>
                         <!-- /.step_text -->
                     </div>
@@ -566,7 +575,7 @@
                         <h4 class="step_title">Виготовлення</h4>
                         <!-- /.step_title -->
                         <p class="step_text">
-                            Підбираємо плстик під середовище в якому знаходиться модель та запускаємо на друк
+                            Підбираємо пластик під середовище в якому знаходиться модель та запускаємо на друк
                         </p>
                         <!-- /.step_text -->
                     </div>
@@ -588,14 +597,14 @@
         </section>
         <!-- /.section steps -->
 
-        <section class="section contacts">
+        <section class="section contacts" id="contacts">
             <div class="container">
                 <h2 class="section_title">Контакти</h2>
                 <div class="contacts-block">
                     <div class="contacts-block_item">
                         <img src="img/contacts/phone-call.png" alt="" class="contacts_img">
                         <div class="contacts_text">
-                            <a href="#" class="contacts_link">+(380) 68 071 88 39</a>
+                            <a href="viber://chat?number=%2B380680718839" class="contacts_link">+(380) 68 071 88 39</a>
                         </div>
                     </div>
 
@@ -609,7 +618,7 @@
                     <div class="contacts-block_item">
                         <img src="img/contacts/message.png" alt="" class="contacts_img">
                         <div class="contacts_text">
-                            <a href="#" class="contacts_link">landsstore.3d@gmail.com</a>
+                            <a href="mailto:landsstore.3d@gmail.com" class="contacts_link">landsstore.3d@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -617,11 +626,6 @@
             <!-- /.container -->
         </section>
         <!-- /.section contacts -->
-        
-        <div class="map" id="map">
-            <div class="overlay" onClick="style.pointerEvents='none'"></div>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1PS4NFrQl-5c_JYqK0WDxDQmL9i1vEfQ&ehbc=2E312F" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
 
         <section class="section questions">
             <div class="container">
@@ -649,19 +653,19 @@
                 </div>
                 <!-- /.footer_pay-info -->
                 <div class="footer_contacts">
-                    <a href="#" class="footer_phone">+(380) 68 071 88 39</a>
-                    <a href="#" class="footer_mail">landsstore.3d@gmail.com</a>
+                    <a href="viber://chat?number=%2B380680718839" class="footer_phone">+(380) 68 071 88 39</a>
+                    <a href="mailto:landsstore.3d@gmail.com" class="footer_mail">landsstore.3d@gmail.com</a>
                     <div class="footer-social">
-                        <a href="#" class="footer-social_link">
+                        <a href="https://www.youtube.com/channel/UCjY2ap8oS1Yy1toW5aoSTDw" class="footer-social_link">
                             <img src="img/footer/youtube.png" alt="">
                         </a>
-                        <a href="#" class="footer-social_link">
+                        <a href="https://www.tiktok.com/@landsstore3d?is_from_webapp=1&sender_device=pc" class="footer-social_link">
                             <img src="img/footer/tik-tok.png" alt="">
                         </a>
-                        <a href="#" class="footer-social_link">
+                        <a href="https://www.instagram.com/landsstore3d/" class="footer-social_link">
                             <img src="img/footer/inst.png" alt="">
                         </a>
-                        <a href="#" class="footer-social_link">
+                        <a href="https://www.instagram.com/lands_store_print/" class="footer-social_link">
                             <img src="img/footer/inst.png" alt="">
                         </a>
                     </div>
@@ -675,6 +679,9 @@
     <!-- /.footer -->
     <!-- Підключення віджета зворотнього звязку через соц.мережі -->
     <script type="text/javascript" src="https://spikmi.org/Widget?Id=13719"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 
 </html>

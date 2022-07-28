@@ -10,11 +10,19 @@
         max-width: 270px
         position: relative
         box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
+        overflow-y: hidden 
+        &:hover
+            .catalog-card_btns
+                transform: translateY(0)
+                opacity: 1
         &_btns
             display: flex
             position: absolute
             bottom: 0
             right: 0
+            transition: 0.2s
+            opacity: 0
+            transform: translateY(100%)
         &-btn
             height: 30px
             font-size: 8px
