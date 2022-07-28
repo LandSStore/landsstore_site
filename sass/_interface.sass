@@ -32,6 +32,8 @@ img
     color: #ffffff
     text-decoration: none
     +bold
+    &:hover
+        cursor: pointer
     &-fitting
         color: $primary
         background-color: #fff
@@ -73,7 +75,9 @@ img
             margin-right: 10px  
    
 @media (max-width: 576px)
-    .button-o
+    .button
+        font-size: 10px
+        &-o
         font-size: 10px
     .checkbox
         &_label

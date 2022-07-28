@@ -36,7 +36,7 @@
 
 @media (max-width: 1199px) {
   .blog-list {
-    justify-content: space-around;
+    justify-content: center;
   }
   .blog-list_card {
     margin-right: 30px;

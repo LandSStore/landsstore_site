@@ -77,6 +77,9 @@ img {
   text-decoration: none;
   font-family: "Proxima Nova Semibold", sans-serif;
 }
+.button:hover {
+  cursor: pointer;
+}
 .button-fitting {
   color: #38b6ff;
   background-color: #fff;
@@ -126,7 +129,8 @@ img {
 }
 
 @media (max-width: 576px) {
-  .button-o {
+  .button {
+    font-size: 10px;
     font-size: 10px;
   }
   .checkbox_label {
@@ -357,6 +361,15 @@ img {
     flex-direction: column;
   }
 }
+@media (max-width: 480px) {
+  .form_row_checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form_checkbox {
+    margin-bottom: 20px;
+  }
+}
 .blog_heading {
   display: flex;
   align-items: center;
@@ -395,7 +408,7 @@ img {
 
 @media (max-width: 1199px) {
   .blog-list {
-    justify-content: space-around;
+    justify-content: center;
   }
   .blog-list_card {
     margin-right: 30px;
@@ -484,5 +497,64 @@ img {
   }
   .catalog-card {
     width: 470px;
+    margin: 10px;
+  }
+}
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.price-block_card {
+  margin-bottom: 10px;
+}
+.price-card {
+  background-color: #fff;
+  max-width: 280px;
+  position: relative;
+}
+.price-card_text {
+  padding: 20px;
+  font-size: 15px;
+}
+.price-card_title {
+  margin: 0;
+}
+.price-card_cost {
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.price-card_pricetag {
+  display: flex;
+  justify-content: space-between;
+}
+.price-card_button {
+  text-align: center;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+}
+.price-card:hover .price-card_button {
+  z-index: 99;
+  bottom: -80px;
+}
+
+@media (max-width: 991px) {
+  .price-block {
+    justify-content: center;
+  }
+  .price-block_card {
+    margin: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .price-block_card {
+    margin: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
