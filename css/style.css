@@ -281,11 +281,15 @@ img {
   padding: 129px 0;
 }
 .offer-block {
-  background: #fff url("../img/offer/form-bg.jpg") no-repeat center right;
+  background: #fff url("../img/offer/form-bg-yellow.jpg") no-repeat center right;
   background-size: contain;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   padding: 80px;
   margin-top: -200px;
+}
+.offer-block_top {
+  background: #fff url("../img/offer/form-bg-yellow.jpg") no-repeat center right;
+  background-size: contain;
 }
 .offer_title {
   font-size: 25px;
@@ -297,6 +301,7 @@ img {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 800px;
 }
 
 .form_row {
@@ -607,5 +612,37 @@ img {
 @media (max-width: 768px) {
   .step {
     width: 100%;
+  }
+}
+.contacts-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contacts-block_item {
+  text-align: center;
+}
+.contacts_img {
+  margin-bottom: 25px;
+}
+.contacts_text {
+  font-size: 16px;
+}
+.contacts_link {
+  text-decoration: none;
+  color: #262626;
+}
+.contacts_address {
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .contacts-block_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contacts_address {
+    max-width: 200px;
+    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
